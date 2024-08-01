@@ -43,7 +43,14 @@ const Header = () => {
                 }
             </nav>
 
-            <div className='ml-auto flex items-center gap-4'>
+            <div className='ml-auto flex items-center gap-5'>
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Search here..."
+                        className="bg-neutral-500"
+                    />
+                </form>
                 <div className="text-4xl text-white">
                 <IoSearchOutline/> 
                 </div>
