@@ -6,6 +6,9 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const Header = () => {
 
+    const [searchInput,setSearchInput] = useState('')
+    const navigate = useNavigate()
+
     const navigation = [
         {
             label : "TV Shows",
@@ -16,6 +19,10 @@ const Header = () => {
             href : "movie"
         }
     ]
+
+    useEffect(()=>{
+        navigate('/search?q=${searchInput}')
+    },[searchInput])
 
   return (
     <header className = "fixed top-0 w-full h-16 bg-neutral-600 bg-opacity-75">
@@ -49,6 +56,8 @@ const Header = () => {
                         type="text"
                         placeholder="Search here..."
                         className="bg-transparent px-4 py-1 outline-none border-none"
+                        onChange={(e)=>setSearchInput(e.target.value)}
+                        value={searchInput}
                     />
                     <button className="text-4xl text-white">
                     <IoSearchOutline/> 
