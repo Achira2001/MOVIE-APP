@@ -44,16 +44,17 @@ const Header = () => {
             </nav>
 
             <div className='ml-auto flex items-center gap-5'>
-                <form>
+                <form className='flex items-center gap-2'>
                     <input
                         type="text"
                         placeholder="Search here..."
-                        className="bg-neutral-500"
+                        className="bg-transparent px-4 py-1 outline-none border-none"
                     />
+                    <button className="text-4xl text-white">
+                    <IoSearchOutline/> 
+                    </button>
                 </form>
-                <div className="text-4xl text-white">
-                <IoSearchOutline/> 
-                </div>
+                
                 <div className='w-9 h-9 rounded-full overflow-hidden cursor-pointer active:scale-50 transition-all'>
                     <img
                         src={userIcon}
