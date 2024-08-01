@@ -28,7 +28,7 @@ const Header = () => {
                 />
             </div>
 
-            <nav className='hidden lg:/flex items-center gap-1 ml-5'>
+            <nav className='hidden lg:flex items-center gap-1 ml-5'>
                 {
                     navigation.map((nav,index) =>{
                         return(
@@ -44,7 +44,7 @@ const Header = () => {
             </nav>
 
             <div className='ml-auto'>
-                <div className='w-10 h-10'>
+                <div className='w-9 h-9 rounded-full overflow-hidden cursor-pointer'>
                     <img
                         src={userIcon}
                         width="w-full h-full"
