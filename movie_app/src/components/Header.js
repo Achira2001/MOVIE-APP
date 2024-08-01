@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className = "fixed top-0 w-full h-16 bg-neutral-600 bg-opacity-75">
-        <div className = 'container mx-auto px-2 flex items-center h-full'>
+        <div className = 'container mx-auto px-3 flex items-center h-full'>
             <div>
                 <img
                     src = {logo}
@@ -28,7 +28,7 @@ const Header = () => {
                 />
             </div>
 
-            <nav className='flex items-center gap-1 ml-5'>
+            <nav className='hidden lg:/flex items-center gap-1 ml-5'>
                 {
                     navigation.map((nav,index) =>{
                         return(
@@ -42,6 +42,15 @@ const Header = () => {
                     })
                 }
             </nav>
+
+            <div className='ml-auto'>
+                <div className='w-10 h-10'>
+                    <img
+                        src={userIcon}
+                        width="w-full h-full"
+                    />
+                </div>
+            </div>
 
         </div>
     </header>
