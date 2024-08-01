@@ -9,4 +9,3 @@ const ExplorePage = () => {
 }
 
 export default ExplorePage
-ExplorePage

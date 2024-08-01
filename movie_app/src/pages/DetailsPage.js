@@ -9,4 +9,3 @@ const DetailsPage = () => {
 }
 
 export default DetailsPage
-DetailsPage
