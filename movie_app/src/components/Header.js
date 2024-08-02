@@ -3,27 +3,9 @@ import logo from '../assets/logo.png'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import userIcon from '../assets/user.png'
 import { IoSearchOutline } from "react-icons/io5";
-import { IoIosHome } from "react-icons/io";
+import { navigation } from '../contants/navigation';
 
-export const navigation = [
-    {
-        label : "TV Shows",
-        href : "tv"
-    },
-    {
-        label : "Movies",
-        href : "movie"
-    }
-]
 
-export const mobileNavigation =[
-    {
-        label : "Home",
-        href : "/",
-        icon : <IoIosHome />
-    },
-    ...navigation
-]
 
 const Header = () => {
 
@@ -31,7 +13,10 @@ const Header = () => {
     const navigate = useNavigate()
 
     useEffect(()=>{
-        navigate('/search?q=${searchInput}')
+        if(searchInput){
+            navigate('/search?q=${searchInput}')
+        }
+        
     },[searchInput])
 
 
